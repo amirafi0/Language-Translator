@@ -15,5 +15,100 @@ body{
     width: 900px;
     background: #fff;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border-radius: 5px;
+}
+.translator{
+    border: 1px solid gray;
+}
+.translator .nav{
+    display: flex;
+    width: 100%;
+    height: 50px;   
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    border: 1px solid white;
+    padding: 0px 20px;
+}
+.translator .nav li select{
+    outline: none;
+    border-style: none;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px 20px;
+    color: gray;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+.translator .nav li select:hover{
+    color: black;
+}
+.bx-transfer{
+    font-size: 22px;
+    cursor: pointer;
+    color: gray;
+    transition: all .3s ease-out;
+}
+.bx-transfer:hover{
+    color: black;
+}
+.write{
+    display: flex;
+}
+.write textarea{
+    width: 100%;
+    outline: none;
+    border-style: none; 
+    resize: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    height: 250px;  
+    position: relative;
+    border-right: 1px solid black;
+}
+.property-from, .property-trans{
+    width: 100%;   
+}
+.write textarea{
+    width: 100%;
+    outline: none;
+    border-style: none; 
+    resize: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    height: 250px;  
+    position: relative;
+    border-right: 1px solid black;
+}
+.property-from, .property-trans{
+    width: 100%;   
+}
+.write .icons{
+    /* position: absolute; */
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;  
+}
+.icons .bx{
+    width: 35px;
+    height: 35px;
+    background:#ddd;
+    line-height: 35px;
+    text-align: center;
+    font-size: 18px;
+    color: black; 
+    border-radius: 50%;
+    cursor: pointer; 
+    transition: all .3s ease-out;
+}
+.icons .bx:hover{
+    background: gray;
+    color: wheat;
+
 }
 
