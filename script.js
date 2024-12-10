@@ -1,9 +1,11 @@
  let langOption = document.querySelectorAll('select');
  let fromText = document.querySelector('.fromText')
  let trans = document.querySelector('.toTrsnlate')
-
-
-
+let voice = document.querySelector('.voice')
+let toVoice = document.querySelector('.to')
+let cpy = document.querySelector('.bx-copy')
+let countValue = document.querySelector('.code')
+let change = document.querySelector('.bx-transfer')
 
 
   langOption.forEach((get, con) =>{
@@ -37,4 +39,32 @@
        })
     })
 
+voice.addEventListener('click', function(){
+   let fromTalk;
+   fromTalk = new SpeechSynthesisUtterance(fromText.value);
+   fromTalk.lang = langOption[0].value;
+   speechSynthesis.speak(fromTalk)
+})
+    
+toVoice.addEventListener('click', function() {
+   let fromTalk;
+   fromTalk = new SpeechSynthesisUtterance(trans.value);
+   fromTalk.lang = langOption[1].value;
+   speechSynthesis.speak(fromTalk)
+})
+cpy.addEventListener('click', function(){
+   navigator.clipboard.writeText(trans.value)
+})
+fromText.addEventListener('keyup', function() {
+   countValue.innerHTML =`${fromText.value.length}/5000`;
+})
 
+change.addEventListener('click', function(){
+   let teampText = fromText.value;
+   fromText.value = trans.value;
+   trans.value = teampText;
+
+   let tempOpt = langOption[0].value;
+   langOption[0].value = langOption[1].value;
+   langOption[1].value = tempOpt;
+})

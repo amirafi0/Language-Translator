@@ -112,3 +112,69 @@ body{
 
 }
 
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin: 0 20px;
+    }
+    .translator .nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+    .translator .nav li select {
+        width: 100%;
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+    .write {
+        flex-direction: column;
+    }
+    .write textarea {
+        height: auto;
+        font-size: 18px;
+    }
+    .write .icons {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+    .icons .bx {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        margin: 0 10px;
+    }
+    .translator .nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .translator .nav li select {
+        width: 100%;
+        padding: 7px 12px;
+        font-size: 14px;
+    }
+    .write textarea {
+        font-size: 16px;
+        height: auto;
+    }
+    .icons .bx {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+}
